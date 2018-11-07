@@ -9,6 +9,12 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * Configures the Springfox-Swagger API to create the 
+ * documentation for the REST API
+ *
+ * @author Rodrigo Spievak Cavalcanti
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {                                    

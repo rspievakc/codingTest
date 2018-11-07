@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+/**
+ * Defines a custom exception handler to wrap the exception
+ * into a ErrorDetails to use it at the front end.
+ *
+ * @author Rodrigo Spievak Cavalcanti
+ */
 @ControllerAdvice
 @RestController
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {

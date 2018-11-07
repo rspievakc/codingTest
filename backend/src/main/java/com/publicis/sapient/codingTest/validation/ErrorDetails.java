@@ -1,5 +1,11 @@
 package com.publicis.sapient.codingTest.validation;
 
+/**
+ * Defines a custom error wrapping bean to be
+ * used at the front end.
+ *
+ * @author Rodrigo Spievak Cavalcanti
+ */
 import java.util.Date;
 
 /*

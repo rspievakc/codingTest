@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.publicis.sapient.codingTest.entity.CreditCard;
 import com.publicis.sapient.codingTest.service.CreditCardService;
 
+/**
+ * Creates a custom controller for handling the custom
+ * API paths, as they are required on the specification.
+ *
+ * @author Rodrigo Spievak Cavalcanti
+ */
 @RestController
 @RequestMapping("/api/creditCard")
 public class CreditCardController {
@@ -21,11 +27,20 @@ public class CreditCardController {
 	public CreditCardController() {
 	}
 	
+	/**
+	 * Add a new credit card on the database
+	 * @param creditCard
+	 * @return creditCard
+	 */
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public CreditCard add(@Valid @RequestBody CreditCard creditCard) {
 		return creditCardService.add(creditCard);
 	}
 	
+	/**
+	 * List all the credit cards registered.
+	 * @return Iterable<CreditCard> 
+	 */
 	@RequestMapping(value = "/getAll", method = RequestMethod.GET)
 	public Iterable<CreditCard> getAll() {
 		return creditCardService.getAll();

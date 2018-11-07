@@ -13,6 +13,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+/**
+ * Defines a credit card entity
+ *
+ * @author Rodrigo Spievak Cavalcanti
+ */
 @Entity
 @Table(name="CREDIT_CARD")
 public class CreditCard implements Serializable {

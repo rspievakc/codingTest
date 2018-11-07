@@ -1,12 +1,14 @@
 package com.publicis.sapient.codingTest.config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
-import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * Configures the Spring's MVC Framework.
+ *
+ * @author Rodrigo Spievak Cavalcanti
+ */
 @Configuration
 // @EnableWebMvc
 public class MvcConfig implements WebMvcConfigurer {
@@ -14,21 +16,12 @@ public class MvcConfig implements WebMvcConfigurer {
 	public MvcConfig() {
 	}
 
+	/**
+	 * Configures the resource path for the static content
+	 */
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/static/**").addResourceLocations("classpath:static/");
 	}
-
-	@Bean
-	public RepositoryRestConfigurer repositoryRestConfigurer() {
-
-		return new RepositoryRestConfigurer() {
-
-			@Override
-			public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-				config.setBasePath("/api");
-			}
-		};
-	}
-
+	
 }
