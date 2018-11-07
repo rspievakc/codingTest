@@ -13,6 +13,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.publicis.sapient.codingTest.util.MoneyDeserializer;
+import com.publicis.sapient.codingTest.util.MoneySerializer;
+
 /**
  * Defines a credit card entity
  *
@@ -40,13 +45,25 @@ public class CreditCard implements Serializable {
 	
 	@Column(name="_limit")
 	@NotNull
+	@JsonSerialize(using = MoneySerializer.class)
+	@JsonDeserialize(using = MoneyDeserializer.class)
 	private BigDecimal limit;
 	
 	@Column(name="balance")
 	@NotNull
+	@JsonSerialize(using = MoneySerializer.class)
+	@JsonDeserialize(using = MoneyDeserializer.class)
 	private BigDecimal balance;
 	
 	public CreditCard() {
+	}
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -70,7 +87,9 @@ public class CreditCard implements Serializable {
 	}
 
 	public void setLimit(BigDecimal limit) {
-		this.limit = limit;
+		if (limit != null) {
+			this.limit = limit.setScale(2, BigDecimal.ROUND_HALF_UP);
+		}
 	}
 
 	public BigDecimal getBalance() {
@@ -78,7 +97,40 @@ public class CreditCard implements Serializable {
 	}
 
 	public void setBalance(BigDecimal balance) {
-		this.balance = balance;
+		if (balance != null) {
+			this.balance = balance.setScale(2, BigDecimal.ROUND_HALF_UP);
+		}
 	}
+	
+	@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CreditCard cc = (CreditCard) o;
+
+        if (!id.equals(cc.id)) return false;
+        if (name != null ? !name.equals(cc.name) : cc.name != null) return false;
+        if (limit != null ? !limit.equals(cc.limit) : cc.limit != null) return false;
+        return balance != null ? balance.equals(cc.balance) : cc.balance == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (limit != null ? limit.hashCode() : 0);
+        result = 31 * result + (balance != null ? balance.hashCode() : 0);
+        return result;
+    }
+
+    public CreditCard clone() {
+    	CreditCard cc = new CreditCard();
+    	cc.setId(this.id);
+    	cc.setName(this.name);
+    	cc.setLimit(this.limit);
+    	cc.setBalance(this.balance);
+        return cc;
+    }
 	
 }

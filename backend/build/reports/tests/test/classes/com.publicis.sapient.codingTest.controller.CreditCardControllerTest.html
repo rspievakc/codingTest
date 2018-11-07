@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">3</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.278s</div>
+<div class="counter">0.521s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,232 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testA_addCreditCard_thenReturnCreditCard"></a>
+<h3 class="failures">testA_addCreditCard_thenReturnCreditCard</h3>
+<span class="code">
+<pre>java.lang.AssertionError: JSON path &quot;balance&quot; expected:&lt;0.10&gt; but was:&lt;0.1&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:55)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:82)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:116)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:195)
+	at com.publicis.sapient.codingTest.controller.CreditCardControllerTest.addCreditCard(CreditCardControllerTest.java:88)
+	at com.publicis.sapient.codingTest.controller.CreditCardControllerTest.testA_addCreditCard_thenReturnCreditCard(CreditCardControllerTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:106)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testB_getAllCreditCardsAndExpectAnArrayWithOneEntry"></a>
+<h3 class="failures">testB_getAllCreditCardsAndExpectAnArrayWithOneEntry</h3>
+<span class="code">
+<pre>java.lang.AssertionError: JSON path &quot;$[0].number&quot;
+Expected: &quot;3333892970767444307&quot;
+     but: was &quot;3333519343345198980&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:73)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$0(JsonPathResultMatchers.java:87)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:195)
+	at com.publicis.sapient.codingTest.controller.CreditCardControllerTest.testB_getAllCreditCardsAndExpectAnArrayWithOneEntry(CreditCardControllerTest.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:106)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testC_addThreeMoreCreditCardsAndExpectAnArrayWithFourEntries"></a>
+<h3 class="failures">testC_addThreeMoreCreditCardsAndExpectAnArrayWithFourEntries</h3>
+<span class="code">
+<pre>java.lang.AssertionError: JSON path &quot;balance&quot; expected:&lt;0.10&gt; but was:&lt;0.1&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:55)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:82)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertValue(JsonPathExpectationsHelper.java:116)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$value$2(JsonPathResultMatchers.java:111)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:195)
+	at com.publicis.sapient.codingTest.controller.CreditCardControllerTest.addCreditCard(CreditCardControllerTest.java:88)
+	at com.publicis.sapient.codingTest.controller.CreditCardControllerTest.testC_addThreeMoreCreditCardsAndExpectAnArrayWithFourEntries(CreditCardControllerTest.java:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:106)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,21 +297,48 @@
 </tr>
 </thead>
 <tr>
-<td class="success">addCreditCard_thenReturnCreditCard</td>
-<td class="success">0.278s</td>
-<td class="success">passed</td>
+<td class="failures">testA_addCreditCard_thenReturnCreditCard</td>
+<td class="failures">0.304s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testB_getAllCreditCardsAndExpectAnArrayWithOneEntry</td>
+<td class="failures">0.190s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testC_addThreeMoreCreditCardsAndExpectAnArrayWithFourEntries</td>
+<td class="failures">0.027s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2018-11-07 11:39:18.439  INFO 5821 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest], using SpringBootContextLoader
-2018-11-07 11:39:18.440  INFO 5821 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2018-11-07 11:39:18.440  INFO 5821 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: CreditCardControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2018-11-07 11:39:18.455  INFO 5821 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.publicis.sapient.codingTest.CodingTestApplication for test class com.publicis.sapient.codingTest.controller.CreditCardControllerTest
-2018-11-07 11:39:18.456  INFO 5821 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2018-11-07 11:39:18.456  INFO 5821 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@493159b7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@226daca2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@272eb760, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@56156375, org.springframework.test.context.support.DirtiesContextTestExecutionListener@152a64e1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5aedd25a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8aaebd0, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@75d92f7b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3392404d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7593b67, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@58f2b437, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@64ecfaa5]
+<pre>18:10:17.953 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.publicis.sapient.codingTest.controller.CreditCardControllerTest]
+18:10:17.961 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+18:10:17.969 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+18:10:17.993 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+18:10:18.004 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest], using SpringBootContextLoader
+18:10:18.007 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: class path resource [com/publicis/sapient/codingTest/controller/CreditCardControllerTest-context.xml] does not exist
+18:10:18.008 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: class path resource [com/publicis/sapient/codingTest/controller/CreditCardControllerTestContext.groovy] does not exist
+18:10:18.008 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+18:10:18.009 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: CreditCardControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:10:18.061 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]
+18:10:18.141 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/rodrigo/Documents/work/sapient/codingTest/backend/build/classes/java/main/com/publicis/sapient/codingTest/CodingTestApplication.class]
+18:10:18.142 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.publicis.sapient.codingTest.CodingTestApplication for test class com.publicis.sapient.codingTest.controller.CreditCardControllerTest
+18:10:18.253 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: using defaults.
+18:10:18.254 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+18:10:18.268 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@111f503a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@222c3e88, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3ae4e6b2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4ab962a2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@214c754f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@62d7d790, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7f1b7c0e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7e36ad3d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c9259b9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@602572ec, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@447a89ea, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@f6e8b1d]
+18:10:18.270 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]
+18:10:18.271 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]
+18:10:18.271 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]
+18:10:18.271 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]
+18:10:18.275 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2f601381 testClass = CreditCardControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2cf14025 testClass = CreditCardControllerTest, locations = '{}', classes = '{class com.publicis.sapient.codingTest.CodingTestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@e7e8512, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@776fb558, [ImportsContextCustomizer@722bbb45 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@50d41fae, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@54616307, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@570afdcd], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+18:10:18.276 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]
+18:10:18.276 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]
+18:10:18.297 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -102,41 +348,43 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.0.RELEASE)
 
-2018-11-07 11:39:18.481  INFO 5821 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : Starting CreditCardControllerTest on Rodrigos-MacBook-Pro.local with PID 5821 (started by rodrigo in /Users/rodrigo/Documents/work/sapient/codingTest)
-2018-11-07 11:39:18.482  INFO 5821 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : No active profile set, falling back to default profiles: default
-2018-11-07 11:39:18.484 DEBUG 5821 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2dc8eb9b
-2018-11-07 11:39:18.998  INFO 5821 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2018-11-07 11:39:19.021  INFO 5821 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 1 repository interfaces.
-2018-11-07 11:39:19.298  INFO 5821 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fc395bf9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-11-07 11:39:19.360  INFO 5821 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$7bb9a92b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-11-07 11:39:19.530  INFO 5821 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2018-11-07 11:39:19.532  INFO 5821 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2018-11-07 11:39:19.611  INFO 5821 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-11-07 11:39:19.967  WARN 5821 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2018-11-07 11:39:20.001 DEBUG 5821 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
-file:/Users/rodrigo/Documents/work/sapient/codingTest/build/classes/java/test/
-2018-11-07 11:39:20.216 DEBUG 5821 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**] in 'resourceHandlerMapping'
-2018-11-07 11:39:20.249 DEBUG 5821 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1, ResponseBodyAdvice
-2018-11-07 11:39:20.259 DEBUG 5821 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2018-11-07 11:39:20.319  INFO 5821 --- [    Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity&lt;springfox.documentation.spring.web.json.Json&gt; springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2018-11-07 11:39:20.670  INFO 5821 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2018-11-07 11:39:20.671  INFO 5821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2018-11-07 11:39:20.686  INFO 5821 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 15 ms
-2018-11-07 11:39:20.701  INFO 5821 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2018-11-07 11:39:20.702  INFO 5821 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2018-11-07 11:39:20.709  INFO 5821 --- [    Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2018-11-07 11:39:20.756  INFO 5821 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : Started CreditCardControllerTest in 2.298 seconds (JVM running for 10.531)
-2018-11-07 11:39:20.817 DEBUG 5821 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
-2018-11-07 11:39:20.876 DEBUG 5821 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read &quot;application/json;charset=UTF-8&quot; to [com.publicis.sapient.codingTest.entity.CreditCard@1f378b6c]
-2018-11-07 11:39:20.986 DEBUG 5821 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json]
-2018-11-07 11:39:20.987 DEBUG 5821 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@1f378b6c]
+2018-11-07 18:10:18.565  INFO 8829 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : Starting CreditCardControllerTest on Rodrigos-MacBook-Pro.local with PID 8829 (started by rodrigo in /Users/rodrigo/Documents/work/sapient/codingTest/backend)
+2018-11-07 18:10:18.567  INFO 8829 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : No active profile set, falling back to default profiles: default
+2018-11-07 18:10:18.589 DEBUG 8829 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@13d330bb
+2018-11-07 18:10:19.535  INFO 8829 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-07 18:10:19.609  INFO 8829 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 1 repository interfaces.
+2018-11-07 18:10:20.190  INFO 8829 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e38016c1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 18:10:20.249  INFO 8829 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$630063f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-07 18:10:20.554  INFO 8829 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-11-07 18:10:20.691  INFO 8829 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2018-11-07 18:10:21.794  INFO 8829 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-11-07 18:10:22.689  WARN 8829 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-11-07 18:10:22.938 DEBUG 8829 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2018-11-07 18:10:23.166  INFO 8829 --- [    Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity&lt;springfox.documentation.spring.web.json.Json&gt; springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-07 18:10:23.597 DEBUG 8829 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2018-11-07 18:10:23.742  INFO 8829 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-07 18:10:23.775 DEBUG 8829 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1, ResponseBodyAdvice
+2018-11-07 18:10:23.835 DEBUG 8829 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /static/**] in 'resourceHandlerMapping'
+2018-11-07 18:10:23.855 DEBUG 8829 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2018-11-07 18:10:23.927  INFO 8829 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2018-11-07 18:10:24.244  INFO 8829 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2018-11-07 18:10:24.245  INFO 8829 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2018-11-07 18:10:24.263  INFO 8829 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 18 ms
+2018-11-07 18:10:24.289  INFO 8829 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-11-07 18:10:24.311  INFO 8829 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-11-07 18:10:24.339  INFO 8829 --- [    Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-11-07 18:10:24.502  INFO 8829 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : Started CreditCardControllerTest in 6.195 seconds (JVM running for 7.204)
+2018-11-07 18:10:24.612 DEBUG 8829 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+2018-11-07 18:10:24.669 DEBUG 8829 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read &quot;application/json;charset=UTF-8&quot; to [java.lang.NullPointerException]
+2018-11-07 18:10:24.775 DEBUG 8829 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2018-11-07 18:10:24.776 DEBUG 8829 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@9750cdc2]
 
 MockHttpServletRequest:
       HTTP Method = POST
-      Request URI = /creditCard/add
+      Request URI = /api/creditCard/add
        Parameters = {}
           Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
-             Body = {&quot;name&quot;:&quot;Credit card holder 1&quot;,&quot;number&quot;:&quot;123456789012345&quot;,&quot;limit&quot;:1000,&quot;balance&quot;:0.1000000000000000055511151231257827021181583404541015625}
+             Body = {&quot;id&quot;:null,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
     Session Attrs = {}
 
 Handler:
@@ -163,7 +411,310 @@ MockHttpServletResponse:
     Error message = null
           Headers = {Content-Type=[application/json;charset=UTF-8]}
      Content type = application/json;charset=UTF-8
-             Body = {&quot;name&quot;:&quot;Credit card holder 1&quot;,&quot;number&quot;:&quot;123456789012345&quot;,&quot;limit&quot;:1000,&quot;balance&quot;:0.1000000000000000055511151231257827021181583404541015625}
+             Body = {&quot;id&quot;:1,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/creditCard/add
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
+             Body = {&quot;id&quot;:null,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Session Attrs = {}
+
+Handler:
+             Type = com.publicis.sapient.codingTest.controller.CreditCardController
+           Method = public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2018-11-07 18:10:24.829 DEBUG 8829 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.Iterable&lt;com.publicis.sapient.codingTest.entity.CreditCard&gt; com.publicis.sapient.codingTest.controller.CreditCardController.getAll()
+2018-11-07 18:10:24.996 DEBUG 8829 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2018-11-07 18:10:24.996 DEBUG 8829 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.publicis.sapient.codingTest.entity.CreditCard@9750cdc2]]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/creditCard/getAll
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.publicis.sapient.codingTest.controller.CreditCardController
+           Method = public java.lang.Iterable&lt;com.publicis.sapient.codingTest.entity.CreditCard&gt; com.publicis.sapient.codingTest.controller.CreditCardController.getAll()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = [{&quot;id&quot;:1,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/creditCard/add
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
+             Body = {&quot;id&quot;:null,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Session Attrs = {}
+
+Handler:
+             Type = com.publicis.sapient.codingTest.controller.CreditCardController
+           Method = public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/creditCard/getAll
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.publicis.sapient.codingTest.controller.CreditCardController
+           Method = public java.lang.Iterable&lt;com.publicis.sapient.codingTest.entity.CreditCard&gt; com.publicis.sapient.codingTest.controller.CreditCardController.getAll()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = [{&quot;id&quot;:1,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2018-11-07 18:10:25.020 DEBUG 8829 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+2018-11-07 18:10:25.021 DEBUG 8829 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read &quot;application/json;charset=UTF-8&quot; to [java.lang.NullPointerException]
+2018-11-07 18:10:25.025 DEBUG 8829 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2018-11-07 18:10:25.026 DEBUG 8829 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@97514221]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/creditCard/add
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
+             Body = {&quot;id&quot;:null,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333573168135320418&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Session Attrs = {}
+
+Handler:
+             Type = com.publicis.sapient.codingTest.controller.CreditCardController
+           Method = public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333573168135320418&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/creditCard/add
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
+             Body = {&quot;id&quot;:null,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Session Attrs = {}
+
+Handler:
+             Type = com.publicis.sapient.codingTest.controller.CreditCardController
+           Method = public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:1,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/creditCard/getAll
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.publicis.sapient.codingTest.controller.CreditCardController
+           Method = public java.lang.Iterable&lt;com.publicis.sapient.codingTest.entity.CreditCard&gt; com.publicis.sapient.codingTest.controller.CreditCardController.getAll()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = [{&quot;id&quot;:1,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333519343345198980&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/creditCard/add
+       Parameters = {}
+          Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
+             Body = {&quot;id&quot;:null,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333573168135320418&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
+    Session Attrs = {}
+
+Handler:
+             Type = com.publicis.sapient.codingTest.controller.CreditCardController
+           Method = public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8]}
+     Content type = application/json;charset=UTF-8
+             Body = {&quot;id&quot;:2,&quot;name&quot;:&quot;Bruce Wayne&quot;,&quot;number&quot;:&quot;3333573168135320418&quot;,&quot;limit&quot;:1000.00,&quot;balance&quot;:0.10}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -178,7 +729,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.8.1</a> at Nov 7, 2018 11:39:21 AM</p>
+<a href="http://www.gradle.org">Gradle 4.8.1</a> at Nov 7, 2018 6:10:27 PM</p>
 </div>
 </div>
 </body>

@@ -9,7 +9,7 @@ import java.util.Random;
  */
 public class CreditCardNumberValidator {
 	
-	private Random random = new Random(System.currentTimeMillis());
+	private static Random random = new Random(System.currentTimeMillis());
 	
 	/**
      * Checks if the card is valid
@@ -87,7 +87,7 @@ public class CreditCardNumberValidator {
      * @return
      *            A randomly generated, valid, credit card number.
      */
-	public String generate(String bin, int length) {
+	public static String generate(String bin, int length) {
 
         // The number of random digits that we need to generate is equal to the
         // total length of the card number minus the start digits given by the
@@ -96,7 +96,7 @@ public class CreditCardNumberValidator {
 
         StringBuilder builder = new StringBuilder(bin);
         for (int i = 0; i < randomNumberLength; i++) {
-            int digit = this.random.nextInt(10);
+            int digit = random.nextInt(10);
             builder.append(digit);
         }
 
