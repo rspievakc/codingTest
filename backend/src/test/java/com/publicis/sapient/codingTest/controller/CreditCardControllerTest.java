@@ -12,7 +12,6 @@ import java.math.BigDecimal;
 
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -167,6 +166,7 @@ public class CreditCardControllerTest {
 
 		@Override
 		public void describeTo(Description description) {
+			// Stub
 		}
 		
 	}
