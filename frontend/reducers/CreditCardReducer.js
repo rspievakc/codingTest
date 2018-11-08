@@ -1,11 +1,13 @@
 import { types } from '../actions/CreditCardActions'
 
+// Initial state for the creditCard redux store
 const INITIAL_STATE = {
   cards: [],
   loading: false,
   error: false,
 }
 
+// Reducers
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case types.ADD_CARD:

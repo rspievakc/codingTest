@@ -6,6 +6,12 @@ import thunk from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import rootReducer from './reducers'
 
+/**
+ * Redux store configuration
+ * 
+ * We are using several middlewares and we need to combine them.
+ */
+
 const logger = createLogger({
   level: 'info',
   collapsed: false,

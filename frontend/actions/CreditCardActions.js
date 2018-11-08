@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { push } from 'react-router-redux'
 
+// Redux types
 export const types = {
   
   ADD_CARD: "ADD_CARD",
@@ -12,6 +13,7 @@ export const types = {
 
 } 
 
+// Redux action creators
 export const loading = (value) => {
   return {
     type: types.LOADING,
@@ -36,8 +38,14 @@ export const error = (error) => {
 export const addCard = (card) => {
   return (dispatch) => {
 
-    if (typeof card.limit === 'string')
-      card.limit = parseFloat(card.limit)
+    // Sets the default value
+    if (!card.limit) {
+        card.limit = 0;
+    } else { 
+      // Converts the limit from string to float
+      if (typeof card.limit === 'string')
+        card.limit = parseFloat(card.limit)
+    }
 
     dispatch(loading(true))
 

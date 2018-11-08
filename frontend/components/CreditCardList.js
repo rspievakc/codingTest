@@ -26,7 +26,12 @@ import {
   listCards,
 } from '../actions'
 
-
+/**
+ * This class implements the credit cards listing.
+ * 
+ * @author Rodrigo S. Cavalcanti
+ * 
+ */
 class CreditCardList extends Component {
   constructor(props) {
     super(props)
@@ -79,6 +84,7 @@ class CreditCardList extends Component {
   }
 }
 
+// Redux boiler plate
 const mapStateToProps = (state) => {
   const { cards } = state.creditCard
   return {

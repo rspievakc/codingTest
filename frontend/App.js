@@ -12,6 +12,12 @@ import CreditCardForm from './components/CreditCardForm'
 import CreditCardList from './components/CreditCardList'
 import './styles/Wrapper.scss'
 
+/**
+ * This class implements the credit card system.
+ * 
+ * @author Rodrigo S. Cavalcanti
+ * 
+ */
 class App extends Component {
   render() {
     const { loading, error } = this.props

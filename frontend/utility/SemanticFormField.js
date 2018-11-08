@@ -12,7 +12,8 @@ export default function semanticFormField({ input, type, label, required, placeh
   }
   return (
     <Form.Field required>
-      <label>{label} {touched && ((error && <span className="formError">{error}</span>) || (warning && <span className="formWarning">{warning}</span>))}</label>
+      <label style={{display:"inline"}}>{label}</label>
+      <span>{touched && ((error && <span className="formError">{error}</span>) || (warning && <span className="formWarning">{warning}</span>))}</span>
       <As {...props} {...input} value={input.value} type={type} placeholder={placeholder} onChange={handleChange} onKeyPress={handleKeyPress} />
     </Form.Field>
   )

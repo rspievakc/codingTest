@@ -1,3 +1,9 @@
+/**
+ * This class implements the credit card input form.
+ * 
+ * @author Rodrigo S. Cavalcanti
+ * 
+ */
 import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
@@ -26,6 +32,9 @@ import {
 import SemanticFormField from "../utility/SemanticFormField"
 import validateCreditCard from "../utility/CreditCardValidator"
 
+/**
+ * Common validation helpers
+ */
 const required = value => value ? undefined : 'Required'
 const maxLength = max => value =>
   value && value.length > max ? `Must be ${max} characters or less` : undefined
@@ -37,36 +46,41 @@ const minValue18 = minValue(18)
 const email = value =>
   value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ?
   'Invalid email address' : undefined
-const validCreditCardNumber = value => value && !validateCreditCard(value) ?
-  'Invalid credit card number' : undefined
 
-const validate = values => {
+/**
+ * Validates the form inputs
+ * It requires a promise as the return.
+ * This validation will only happen during the form submition
+ */
+const asyncValidate = values => {
+  return new Promise((resolve, reject) => {
     const errors = {}
     if (!values.name) {
-      errors.name = 'Required'
+      errors.name = 'This field is required.'
     } 
     if (!values.number) {
-      errors.number = 'Required'
+      errors.number = 'This field is required.'
     }
-    else if (!validCreditCardNumber(values.number)) {
-        errors.number = 'Invalid Number'
+    else if (!validateCreditCard(values.number)) {
+        errors.number = 'Invalid credit card number.'
     }
     if (!values.limit) {
-      errors.limit = 'Required'
+      errors.limit = 'This field is required.'
     }
-    return errors
-  }
+    if (Object.keys(errors).length !== 0 || errors.constructor !== Object) {
+      reject(errors)
+    } else {
+      resolve();
+    }
+  })
+}
 
 class CreditCardForm extends Component {
   constructor(props) {
     super(props)
   }
 
-  componentWillReceiveProps(nextProps) {
-  }
-
   onSubmit = (values) => {
-    console.log(values)
     this.props.addCard(values)
   }
 
@@ -103,10 +117,10 @@ class CreditCardForm extends Component {
               type="number"
             />
             <div style={{textAlign: 'right'}}>
-              <Button className={submitting ? 'submit blue loading' : 'submit blue'} onClick={handleSubmit(this.onSubmit)}>
+              <Button disabled={pristine || submitting} className="submit blue" onClick={handleSubmit(this.onSubmit)}>
                 Add
               </Button>
-              <Button className={submitting ? 'submit blue loading' : 'submit blue'} onClick={reset}>
+              <Button disabled={pristine || submitting} onClick={reset}>
                 Reset
               </Button>
             </div>
@@ -116,10 +130,9 @@ class CreditCardForm extends Component {
   }
 }
 
+// Redux boiler plate
 const mapStateToProps = (state) => {
-  const { user } = state
   return {
-    user,
     initialValues: {
     },
     formValues: getFormValues('creditCartForm')(state)
@@ -134,6 +147,7 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
   form: 'creditCartForm',
-  validate,
+  asyncValidate,
+  asyncBlurFields: [],
   enableReinitialize: true,
 })(CreditCardForm))
