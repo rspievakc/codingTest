@@ -21,7 +21,7 @@ export const loading = (value) => {
 
 export const cardsLoaded = (cards) => {
   return {
-    type: types.ERROR,
+    type: types.CARDS_LOADED,
     payload: cards,
   }
 }
@@ -33,38 +33,34 @@ export const error = (error) => {
   }
 }
 
-export const addCard = (name, number, limit, balance) => {
+export const addCard = (card) => {
   return (dispatch) => {
-    const data = {
-      name,
-      number,
-      limit,
-      balance
-    }
+
+    if (typeof card.limit === 'string')
+      card.limit = parseFloat(card.limit)
 
     dispatch(loading(true))
 
-    axios.post('/api/creditCard/add', data)
+    axios.post('/api/creditCard/add', card)
       .then((response) => {
+        dispatch(listCards())
+      }).catch((err) => {
         dispatch(loading(false))
-        dispatch(cardsLoaded(response.data))
-      }).catch((error) => {
-        dispatch(loading(false))
-        dispatch(error(error))
+        dispatch(error(err))
       })
   }
 }
 
 export const listCards = () => {
-  dispatch(loading(true))
   return (dispatch) => {
-    axios.get('/api/creditCard/list')
+    dispatch(loading(true))
+    axios.get('/api/creditCard/getAll')
       .then((response) => {
-        dispatch(loading(false))
         dispatch(cardsLoaded(response.data))
-      }).catch((error) => {
         dispatch(loading(false))
-        dispatch(error(error))
+      }).catch((err) => {
+        dispatch(loading(false))
+        dispatch(error(err))
       })
   }
 }

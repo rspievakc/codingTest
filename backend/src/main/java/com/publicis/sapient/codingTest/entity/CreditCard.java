@@ -50,10 +50,9 @@ public class CreditCard implements Serializable {
 	private BigDecimal limit;
 	
 	@Column(name="balance")
-	@NotNull
 	@JsonSerialize(using = MoneySerializer.class)
 	@JsonDeserialize(using = MoneyDeserializer.class)
-	private BigDecimal balance;
+	private BigDecimal balance = new BigDecimal(0).setScale(2, BigDecimal.ROUND_HALF_UP);
 	
 	public CreditCard() {
 	}

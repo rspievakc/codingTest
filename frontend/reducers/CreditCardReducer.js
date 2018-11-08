@@ -1,7 +1,7 @@
 import { types } from '../actions/CreditCardActions'
 
 const INITIAL_STATE = {
-  cards: null,
+  cards: [],
   loading: false,
   error: false,
 }

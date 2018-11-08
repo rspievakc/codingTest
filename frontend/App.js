@@ -13,6 +13,7 @@ class App extends Component {
     return (
       <div>
         <CreditCardForm />
+        <CreditCardList />
       </div>
     )
   }

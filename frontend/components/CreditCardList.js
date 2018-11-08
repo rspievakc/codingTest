@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
-import { Button, Radio, Form, Icon, Loader } from 'semantic-ui-react'
+import { Button, Radio, Form, Icon, Loader, Table, Label, Container } from 'semantic-ui-react'
 import { Field, FieldArray, reduxForm, change, arrayPush, arrayRemove } from 'redux-form'
 import { getFormValues } from 'redux-form/immutable'
 import {
@@ -12,61 +12,54 @@ import {
 class CreditCardList extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-    }
   }
 
   componentWillReceiveProps(nextProps) {
-    /*if (nextProps.match.params.eventId && this.state.eventId !== nextProps.match.params.eventId) {
-      this.setState({ eventId: nextProps.match.params.eventId })
-      this.props.editEvent(nextProps.match.params.eventId)
-    }
-    const formValues = nextProps.formValues
-    if (formValues && formValues.place && formValues.place.id && this.state.placeId !== formValues.place.id) {
-      this.setState({ placeId: formValues.place.id })
-      this.loadPlaceDetails(formValues.place.id)
-    }*/
-  }
-
-  onSubmit = (values) => {
-    const formValues = this.props.formValues
-    //this.props.saveEvent(formValues)
   }
 
   render() {
-    const { handleSubmit, pristine, reset, submitting, onSubmit, loading } = this.props
+    const { cards } = this.props
 
     return (
-      <div>
-        <Form>
-          <div>
-            <div>
-              <div>
-                <h1>Credit Card System</h1>
-              </div>
-              <div>
-                <div className="footerRight">
-                  <Button className={submitting ? 'submit blue loading' : 'submit blue'} onClick={this.props.handleSubmit(this.onSubmit)}>
-                    {this.state.eventId ? 'Submit Edit' : 'Submit Event'}
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Form>
-      </div>
+      <Container>
+        <Table celled>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell textAlign="center">Name</Table.HeaderCell>
+              <Table.HeaderCell textAlign="center">Card Number</Table.HeaderCell>
+              <Table.HeaderCell textAlign="center">Balance</Table.HeaderCell>
+              <Table.HeaderCell textAlign="center">Limit</Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {cards.map((card)=> {
+              return (
+                <Table.Row key={card.id}>
+                <Table.Cell textAlign="center">
+                  {card.name}
+                </Table.Cell>
+                <Table.Cell textAlign="center">
+                  {card.number}
+                </Table.Cell>
+                <Table.Cell textAlign="center">
+                  &pound;{card.balance}
+                </Table.Cell>
+                <Table.Cell textAlign="center">
+                  &pound;{card.limit}
+                </Table.Cell>
+              </Table.Row>
+              )})}
+          </Table.Body>
+        </Table>
+      </Container>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  const { user } = state
+  const { cards } = state.creditCard
   return {
-    user,
-    initialValues: {
-    },
-    formValues: getFormValues('creditCartForm')(state)
+    cards,
   }
 }
 
@@ -78,4 +71,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
   form: 'creditCartForm',
   enableReinitialize: true,
-}))
+})(CreditCardList))
