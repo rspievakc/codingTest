@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import com.publicis.sapient.codingTest.entity.CreditCard;
 
 /**
- * Defines a repository for the Spring Framework's REST
+ * Defines a spring data repository for the credit card model
  *
  * @author Rodrigo Spievak Cavalcanti
  */

@@ -15,6 +15,7 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.publicis.sapient.codingTest.util.CreditCardNumberValidator.CreditCardNumberConstraint;
 import com.publicis.sapient.codingTest.util.MoneyDeserializer;
 import com.publicis.sapient.codingTest.util.MoneySerializer;
 
@@ -41,6 +42,7 @@ public class CreditCard implements Serializable {
     @NotNull
     @Size(max = 19)
 	@Column(name="number")
+    @CreditCardNumberConstraint
 	private String number;
 	
 	@Column(name="_limit")

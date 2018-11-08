@@ -14,7 +14,7 @@ public class IndexController {
 	
 	@RequestMapping("/")
     public String index() {
-        return "/static/index.html";
+        return "/index.html";
     }
 
 }

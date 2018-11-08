@@ -1,13 +1,24 @@
 package com.publicis.sapient.codingTest.util;
 
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.Random;
+
+import javax.validation.Constraint;
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+import javax.validation.Payload;
 
 /**
  * A credit card number validator and generator.
+ * This class implements the java constraint validator and the associated annotation.
  *
  * @author Rodrigo Spievak Cavalcanti
  */
-public class CreditCardNumberValidator {
+public class CreditCardNumberValidator implements ConstraintValidator<CreditCardNumberValidator.CreditCardNumberConstraint, String> {
 	
 	private static Random random = new Random(System.currentTimeMillis());
 	
@@ -100,7 +111,20 @@ public class CreditCardNumberValidator {
 
         return builder.toString();
     }
-
 	
+	@Documented
+    @Constraint(validatedBy = CreditCardNumberValidator.class)
+    @Target( { ElementType.METHOD, ElementType.FIELD })
+    @Retention(RetentionPolicy.RUNTIME)
+    public static @interface CreditCardNumberConstraint {
+        String message() default "Invalid phone number";
+        Class<?>[] groups() default {};
+        Class<? extends Payload>[] payload() default {};
+    }
+
+	@Override
+	public boolean isValid(String value, ConstraintValidatorContext context) {
+		return CreditCardNumberValidator.check(value);
+	}
 
 }

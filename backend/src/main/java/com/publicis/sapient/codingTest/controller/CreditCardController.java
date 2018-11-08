@@ -29,8 +29,11 @@ public class CreditCardController {
 	
 	/**
 	 * Add a new credit card on the database
-	 * @param creditCard
-	 * @return creditCard
+	 * This end point only accepts the Post HTTP method.
+	 * The input parameter will be validated.
+	 * 
+	 * @param creditCard the new creditCard to be added to the collection.
+	 * @return the persisted instance for the credit card
 	 */
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public CreditCard add(@Valid @RequestBody CreditCard creditCard) {
@@ -39,7 +42,8 @@ public class CreditCardController {
 	
 	/**
 	 * List all the credit cards registered.
-	 * @return Iterable<CreditCard> 
+	 * This end point only accepts the Get HTTP method.
+	 * @return an iterator with all the existent credit cards.
 	 */
 	@RequestMapping(value = "/getAll", method = RequestMethod.GET)
 	public Iterable<CreditCard> getAll() {

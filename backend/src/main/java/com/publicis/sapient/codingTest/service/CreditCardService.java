@@ -10,14 +10,15 @@ import com.publicis.sapient.codingTest.entity.CreditCard;
 public interface CreditCardService {
 
 	/**
-	 * Return all the persisted credit cards
-	 * @return Iterable<CreditCard>
+	 * Retrieve all the existent credit cards
+	 * @return an iterator with all the existent credit cards 
 	 */
 	Iterable<CreditCard> getAll();
 	
 	/**
-	 * Return all the persisted credit cards
-	 * @return CreditCard
+	 * Save a new credit card and return the persisted instance.
+	 * @param creditCard the instance to be persisted
+	 * @return the persisted instance of the credit card.
 	 */
 	CreditCard add(CreditCard creditCard);
 
