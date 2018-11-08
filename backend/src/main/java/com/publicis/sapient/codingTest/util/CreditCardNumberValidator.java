@@ -47,9 +47,9 @@ public class CreditCardNumberValidator {
             digits[i] = Character.getNumericValue(number.charAt(i));
         }
         
-        /* Double every other starting from right - jumping from 2 in 2 */
+        /* Double every other starting from right - steps 2 by 2 */
         for (int i = digits.length - 1; i >= 0; i -= 2)	{
-            digits[i] += digits[i];
+            digits[i] += digits[i]; // Doubles the value of the digit
             
             /* Taking the sum of digits grater than 10 - simple trick by subtract 9 */
             if (digits[i] >= 10) {
@@ -71,13 +71,7 @@ public class CreditCardNumberValidator {
     }
 	
 	/**
-     * Generates a random valid credit card number. For more information about
-     * the credit card number generation algorithms and credit card numbers
-     * refer to <a href="http://euro.ecom.cmu.edu/resources/elibrary/everycc.htm">Everything
-     * you ever wanted to know about CC's</a>, <a
-     * href="http://www.darkcoding.net/credit-card/">Graham King's blog</a>, and
-     * <a href="http://codytaylor.org/2009/11/this-is-how-credit-card-numbers-are-generated.html"
-     * >This is How Credit Card Numbers Are Generated</a>
+     * Generates a random valid credit card number. 
      *
      * @param bin
      *            The bank identification number, a set digits at the start of the credit card

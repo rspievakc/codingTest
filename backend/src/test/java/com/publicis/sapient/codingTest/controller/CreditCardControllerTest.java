@@ -28,6 +28,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.publicis.sapient.codingTest.entity.CreditCard;
 import com.publicis.sapient.codingTest.util.CreditCardNumberValidator;
 
+
+/**
+ * Test for the the credit card services
+ * 
+ * The test run in ordered and synchronous modes
+ * It test by accessing the end points over HTTP
+ *
+ * @author Rodrigo Spievak Cavalcanti
+ */
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
 @SpringBootTest

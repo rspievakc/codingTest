@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import com.publicis.sapient.codingTest.util.CreditCardNumberValidator;
 
-public class LunTest {
+public class LuhnTest {
 	
 	@Before
     public void setUp() {
