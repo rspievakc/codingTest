@@ -1,17 +1,39 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
-import { Button, Radio, Form, Icon, Loader, Table, Label, Container } from 'semantic-ui-react'
-import { Field, FieldArray, reduxForm, change, arrayPush, arrayRemove } from 'redux-form'
+import { 
+  Button, 
+  Radio, 
+  Form, 
+  Icon, 
+  Loader, 
+  Table, 
+  Label, 
+  Container,
+  Header,
+  Segment,
+} from 'semantic-ui-react'
+import { 
+  Field,
+  FieldArray,
+  reduxForm,
+  change,
+  arrayPush,
+  arrayRemove,
+} from 'redux-form'
 import { getFormValues } from 'redux-form/immutable'
 import {
-  addCard,
+  listCards,
 } from '../actions'
 
 
 class CreditCardList extends Component {
   constructor(props) {
     super(props)
+  }
+
+  componentDidMount() {
+      this.props.listCards();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -21,7 +43,8 @@ class CreditCardList extends Component {
     const { cards } = this.props
 
     return (
-      <Container>
+      <Segment className={this.props.className}>
+        <Header as='h3' textAlign='left' >Existing cards</Header>
         <Table celled>
           <Table.Header>
             <Table.Row>
@@ -51,7 +74,7 @@ class CreditCardList extends Component {
               )})}
           </Table.Body>
         </Table>
-      </Container>
+      </Segment>
     )
   }
 }
@@ -65,6 +88,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    listCards: () => dispatch(listCards()),
   }
 }
 

@@ -63,15 +63,6 @@ class CreditCardForm extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    /*if (nextProps.match.params.eventId && this.state.eventId !== nextProps.match.params.eventId) {
-      this.setState({ eventId: nextProps.match.params.eventId })
-      this.props.editEvent(nextProps.match.params.eventId)
-    }
-    const formValues = nextProps.formValues
-    if (formValues && formValues.place && formValues.place.id && this.state.placeId !== formValues.place.id) {
-      this.setState({ placeId: formValues.place.id })
-      this.loadPlaceDetails(formValues.place.id)
-    }*/
   }
 
   onSubmit = (values) => {
@@ -83,10 +74,9 @@ class CreditCardForm extends Component {
     const { handleSubmit, pristine, reset, submitting, onSubmit, loading } = this.props
 
     return (
-      <div>e
         <Form>
-          <Container>
-            <Header as='h1' textAlign='center' >Credit Card System</Header>
+          <Segment>
+            <Header as='h3' textAlign='left' >Add</Header>
             <Field name="name" 
               label="Name"
               component={SemanticFormField}
@@ -112,15 +102,16 @@ class CreditCardForm extends Component {
               pattern="[0-9]*"
               type="number"
             />
-            <Button className={submitting ? 'submit blue loading' : 'submit blue'} onClick={handleSubmit(this.onSubmit)}>
-              Add
-            </Button>
-            <Button className={submitting ? 'submit blue loading' : 'submit blue'} onClick={reset}>
-              Reset
-            </Button>            
-          </Container>
+            <div style={{textAlign: 'right'}}>
+              <Button className={submitting ? 'submit blue loading' : 'submit blue'} onClick={handleSubmit(this.onSubmit)}>
+                Add
+              </Button>
+              <Button className={submitting ? 'submit blue loading' : 'submit blue'} onClick={reset}>
+                Reset
+              </Button>
+            </div>
+          </Segment>
         </Form>
-      </div>
     )
   }
 }
