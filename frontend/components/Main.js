@@ -17,7 +17,9 @@ import 'semantic-ui-css/semantic.min.css'
 import '../styles/Wrapper.scss'
 
 /**
- * This class implements the credit card system.
+ * This class implements the wrapper layout for the credit card system.
+ * It injects the required scss (CSS) files and tracks the state
+ * for the loading and error store properties.
  * 
  * @author Rodrigo S. Cavalcanti
  * 
@@ -52,7 +54,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    authenticate: () => dispatch(authenticate())
   }
 }
 

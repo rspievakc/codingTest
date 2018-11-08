@@ -22,7 +22,8 @@ import './styles/Wrapper.scss'
 const store = configureStore()
 
 /**
- * This class implements the credit card system.
+ * This class implements the entry point for the Credit Card System.
+ * It's main pourpose is to inject the redux store
  * 
  * @author Rodrigo S. Cavalcanti
  * 

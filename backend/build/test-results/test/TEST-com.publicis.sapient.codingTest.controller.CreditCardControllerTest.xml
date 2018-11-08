@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.publicis.sapient.codingTest.controller.CreditCardControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-11-08T18:16:38" hostname="Rodrigos-MacBook-Pro.local" time="0.471">
+<testsuite name="com.publicis.sapient.codingTest.controller.CreditCardControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-11-08T19:59:11" hostname="Rodrigos-MacBook-Pro.local" time="0.619">
   <properties/>
-  <testcase name="testA_addCreditCard_thenReturnCreditCard" classname="com.publicis.sapient.codingTest.controller.CreditCardControllerTest" time="0.263"/>
-  <testcase name="testB_getAllCreditCardsAndExpectAnArrayWithOneEntry" classname="com.publicis.sapient.codingTest.controller.CreditCardControllerTest" time="0.178"/>
-  <testcase name="testC_addThreeMoreCreditCardsAndExpectAnArrayWithFourEntries" classname="com.publicis.sapient.codingTest.controller.CreditCardControllerTest" time="0.028"/>
-  <system-out><![CDATA[2018-11-08 16:16:36.498  INFO 17362 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest], using SpringBootContextLoader
-2018-11-08 16:16:36.499  INFO 17362 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2018-11-08 16:16:36.500  INFO 17362 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: CreditCardControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2018-11-08 16:16:36.513  INFO 17362 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.publicis.sapient.codingTest.CodingTestApplication for test class com.publicis.sapient.codingTest.controller.CreditCardControllerTest
-2018-11-08 16:16:36.514  INFO 17362 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2018-11-08 16:16:36.515  INFO 17362 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7329cfc4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3ba249d5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@45194e03, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@71c15286, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c2bf495, org.springframework.test.context.transaction.TransactionalTestExecutionListener@656ef024, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6a88d3dc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1126e969, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2ba2884, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@10c70727, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3cfd20d0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1a36eb87]
+  <testcase name="testA_addCreditCard_thenReturnCreditCard" classname="com.publicis.sapient.codingTest.controller.CreditCardControllerTest" time="0.343"/>
+  <testcase name="testB_getAllCreditCardsAndExpectAnArrayWithOneEntry" classname="com.publicis.sapient.codingTest.controller.CreditCardControllerTest" time="0.227"/>
+  <testcase name="testC_addThreeMoreCreditCardsAndExpectAnArrayWithFourEntries" classname="com.publicis.sapient.codingTest.controller.CreditCardControllerTest" time="0.047"/>
+  <system-out><![CDATA[2018-11-08 17:59:09.809  INFO 19115 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest], using SpringBootContextLoader
+2018-11-08 17:59:09.810  INFO 19115 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-11-08 17:59:09.811  INFO 19115 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.publicis.sapient.codingTest.controller.CreditCardControllerTest]: CreditCardControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-11-08 17:59:09.822  INFO 19115 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.publicis.sapient.codingTest.CodingTestApplication for test class com.publicis.sapient.codingTest.controller.CreditCardControllerTest
+2018-11-08 17:59:09.823  INFO 19115 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-11-08 17:59:09.824  INFO 19115 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7329cfc4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3ba249d5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@45194e03, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@71c15286, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c2bf495, org.springframework.test.context.transaction.TransactionalTestExecutionListener@656ef024, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6a88d3dc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1126e969, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2ba2884, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@10c70727, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3cfd20d0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1a36eb87]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -19,43 +19,43 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.0.RELEASE)
 
-2018-11-08 16:16:36.539  INFO 17362 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : Starting CreditCardControllerTest on Rodrigos-MacBook-Pro.local with PID 17362 (started by rodrigo in /Users/rodrigo/Documents/work/sapient/codingTest/backend)
-2018-11-08 16:16:36.540  INFO 17362 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : No active profile set, falling back to default profiles: default
-2018-11-08 16:16:36.542 DEBUG 17362 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@43906928
-2018-11-08 16:16:36.882  INFO 17362 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2018-11-08 16:16:36.892  INFO 17362 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 1 repository interfaces.
-2018-11-08 16:16:36.981  INFO 17362 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a6aa49] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-11-08 16:16:37.002  INFO 17362 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8026f77b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-11-08 16:16:37.089  INFO 17362 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2018-11-08 16:16:37.091  INFO 17362 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2018-11-08 16:16:37.148  INFO 17362 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2018-11-08 16:16:37.482  WARN 17362 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2018-11-08 16:16:37.576 DEBUG 17362 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
-2018-11-08 16:16:37.699  INFO 17362 --- [    Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2018-11-08 16:16:37.822 DEBUG 17362 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
-2018-11-08 16:16:37.871  INFO 17362 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2018-11-08 16:16:37.881 DEBUG 17362 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1, ResponseBodyAdvice
-2018-11-08 16:16:37.896 DEBUG 17362 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /static/**] in 'resourceHandlerMapping'
-2018-11-08 16:16:37.904 DEBUG 17362 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2018-11-08 16:16:37.939  INFO 17362 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2018-11-08 16:16:38.215  INFO 17362 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2018-11-08 16:16:38.215  INFO 17362 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2018-11-08 16:16:38.231  INFO 17362 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
-2018-11-08 16:16:38.247  INFO 17362 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2018-11-08 16:16:38.248  INFO 17362 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2018-11-08 16:16:38.255  INFO 17362 --- [    Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2018-11-08 16:16:38.310  INFO 17362 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : Started CreditCardControllerTest in 1.791 seconds (JVM running for 8.833)
-2018-11-08 16:16:38.369 DEBUG 17362 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
-2018-11-08 16:16:38.428 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [java.lang.NullPointerException]
-2018-11-08 16:16:38.527 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
-2018-11-08 16:16:38.528 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@9750cdc2]
+2018-11-08 17:59:09.843  INFO 19115 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : Starting CreditCardControllerTest on Rodrigos-MacBook-Pro.local with PID 19115 (started by rodrigo in /Users/rodrigo/Documents/work/sapient/codingTest/backend)
+2018-11-08 17:59:09.844  INFO 19115 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : No active profile set, falling back to default profiles: default
+2018-11-08 17:59:09.846 DEBUG 19115 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@43906928
+2018-11-08 17:59:10.164  INFO 19115 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-08 17:59:10.177  INFO 19115 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 1 repository interfaces.
+2018-11-08 17:59:10.312  INFO 19115 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a6aa49] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-08 17:59:10.333  INFO 19115 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$8026f77b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-08 17:59:10.425  INFO 19115 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2018-11-08 17:59:10.426  INFO 19115 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2018-11-08 17:59:10.479  INFO 19115 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-11-08 17:59:10.826  WARN 19115 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-11-08 17:59:10.937 DEBUG 19115 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2018-11-08 17:59:11.101  INFO 19115 --- [    Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-11-08 17:59:11.254 DEBUG 19115 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2018-11-08 17:59:11.311  INFO 19115 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-08 17:59:11.326 DEBUG 19115 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1, ResponseBodyAdvice
+2018-11-08 17:59:11.347 DEBUG 19115 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /static/**] in 'resourceHandlerMapping'
+2018-11-08 17:59:11.356 DEBUG 19115 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2018-11-08 17:59:11.392  INFO 19115 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2018-11-08 17:59:11.629  INFO 19115 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2018-11-08 17:59:11.630  INFO 19115 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2018-11-08 17:59:11.646  INFO 19115 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
+2018-11-08 17:59:11.665  INFO 19115 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-11-08 17:59:11.666  INFO 19115 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-11-08 17:59:11.672  INFO 19115 --- [    Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-11-08 17:59:11.733  INFO 19115 --- [    Test worker] c.p.s.c.c.CreditCardControllerTest       : Started CreditCardControllerTest in 1.906 seconds (JVM running for 9.567)
+2018-11-08 17:59:11.813 DEBUG 19115 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+2018-11-08 17:59:11.894 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [java.lang.NullPointerException]
+2018-11-08 17:59:12.026 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2018-11-08 17:59:12.027 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@9750cdc2]
 
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/creditCard/add
        Parameters = {}
           Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
-             Body = {"id":null,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}
+             Body = {"id":null,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}
     Session Attrs = {}
 
 Handler:
@@ -82,13 +82,13 @@ MockHttpServletResponse:
     Error message = null
           Headers = {Content-Type=[application/json;charset=UTF-8]}
      Content type = application/json;charset=UTF-8
-             Body = {"id":1,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}
+             Body = {"id":1,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2018-11-08 16:16:38.581 DEBUG 17362 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.Iterable<com.publicis.sapient.codingTest.entity.CreditCard> com.publicis.sapient.codingTest.controller.CreditCardController.getAll()
-2018-11-08 16:16:38.745 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
-2018-11-08 16:16:38.745 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.publicis.sapient.codingTest.entity.CreditCard@9750cdc2]]
+2018-11-08 17:59:12.087 DEBUG 19115 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.Iterable<com.publicis.sapient.codingTest.entity.CreditCard> com.publicis.sapient.codingTest.controller.CreditCardController.getAll()
+2018-11-08 17:59:12.301 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2018-11-08 17:59:12.301 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.publicis.sapient.codingTest.entity.CreditCard@9750cdc2]]
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -122,21 +122,21 @@ MockHttpServletResponse:
     Error message = null
           Headers = {Content-Type=[application/json;charset=UTF-8]}
      Content type = application/json;charset=UTF-8
-             Body = [{"id":1,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}]
+             Body = [{"id":1,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}]
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2018-11-08 16:16:38.759 DEBUG 17362 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
-2018-11-08 16:16:38.760 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [java.lang.NullPointerException]
-2018-11-08 16:16:38.763 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
-2018-11-08 16:16:38.763 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@97514221]
+2018-11-08 17:59:12.314 DEBUG 19115 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+2018-11-08 17:59:12.315 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [java.lang.NullPointerException]
+2018-11-08 17:59:12.317 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2018-11-08 17:59:12.317 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@97514221]
 
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/creditCard/add
        Parameters = {}
           Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
-             Body = {"id":null,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}
+             Body = {"id":null,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}
     Session Attrs = {}
 
 Handler:
@@ -163,21 +163,21 @@ MockHttpServletResponse:
     Error message = null
           Headers = {Content-Type=[application/json;charset=UTF-8]}
      Content type = application/json;charset=UTF-8
-             Body = {"id":2,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}
+             Body = {"id":2,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2018-11-08 16:16:38.766 DEBUG 17362 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
-2018-11-08 16:16:38.767 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [java.lang.NullPointerException]
-2018-11-08 16:16:38.769 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
-2018-11-08 16:16:38.770 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@9751b680]
+2018-11-08 17:59:12.321 DEBUG 19115 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+2018-11-08 17:59:12.322 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [java.lang.NullPointerException]
+2018-11-08 17:59:12.324 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2018-11-08 17:59:12.324 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@9751b680]
 
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/creditCard/add
        Parameters = {}
           Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
-             Body = {"id":null,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}
+             Body = {"id":null,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}
     Session Attrs = {}
 
 Handler:
@@ -204,21 +204,21 @@ MockHttpServletResponse:
     Error message = null
           Headers = {Content-Type=[application/json;charset=UTF-8]}
      Content type = application/json;charset=UTF-8
-             Body = {"id":3,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}
+             Body = {"id":3,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2018-11-08 16:16:38.773 DEBUG 17362 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
-2018-11-08 16:16:38.774 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [java.lang.NullPointerException]
-2018-11-08 16:16:38.776 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
-2018-11-08 16:16:38.776 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@97522adf]
+2018-11-08 17:59:12.327 DEBUG 19115 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.publicis.sapient.codingTest.entity.CreditCard com.publicis.sapient.codingTest.controller.CreditCardController.add(com.publicis.sapient.codingTest.entity.CreditCard)
+2018-11-08 17:59:12.328 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [java.lang.NullPointerException]
+2018-11-08 17:59:12.330 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2018-11-08 17:59:12.330 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.publicis.sapient.codingTest.entity.CreditCard@97522adf]
 
 MockHttpServletRequest:
       HTTP Method = POST
       Request URI = /api/creditCard/add
        Parameters = {}
           Headers = {Content-Type=[application/json;charset=UTF-8], Accept=[application/json]}
-             Body = {"id":null,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}
+             Body = {"id":null,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}
     Session Attrs = {}
 
 Handler:
@@ -245,13 +245,13 @@ MockHttpServletResponse:
     Error message = null
           Headers = {Content-Type=[application/json;charset=UTF-8]}
      Content type = application/json;charset=UTF-8
-             Body = {"id":4,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}
+             Body = {"id":4,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2018-11-08 16:16:38.779 DEBUG 17362 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.Iterable<com.publicis.sapient.codingTest.entity.CreditCard> com.publicis.sapient.codingTest.controller.CreditCardController.getAll()
-2018-11-08 16:16:38.782 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
-2018-11-08 16:16:38.782 DEBUG 17362 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.publicis.sapient.codingTest.entity.CreditCard@9750cdc2, com.publicis.sapient.codingTest.entity.CreditCard@97514221, com.publicis.sapient.codingTest.entity.CreditCard@9751b680, com.publicis.sapient.codingTest.entity.CreditCard@97522adf]]
+2018-11-08 17:59:12.334 DEBUG 19115 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.Iterable<com.publicis.sapient.codingTest.entity.CreditCard> com.publicis.sapient.codingTest.controller.CreditCardController.getAll()
+2018-11-08 17:59:12.356 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+2018-11-08 17:59:12.357 DEBUG 19115 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [[com.publicis.sapient.codingTest.entity.CreditCard@9750cdc2, com.publicis.sapient.codingTest.entity.CreditCard@97514221, com.publicis.sapient.codingTest.entity.CreditCard@9751b680, com.publicis.sapient.codingTest.entity.CreditCard@97522adf]]
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -285,7 +285,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = {Content-Type=[application/json;charset=UTF-8]}
      Content type = application/json;charset=UTF-8
-             Body = [{"id":1,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10},{"id":2,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10},{"id":3,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10},{"id":4,"name":"Bruce Wayne","number":"3333993304043891354","limit":1000.00,"balance":0.10}]
+             Body = [{"id":1,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10},{"id":2,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10},{"id":3,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10},{"id":4,"name":"Bruce Wayne","number":"3333698067369012289","limit":1000.00,"balance":0.10}]
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
