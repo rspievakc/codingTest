@@ -20,7 +20,7 @@
 > npm run build
 
 ### Switch to the backend module:
-> cd ../frontEnd
+> cd ../backend
 
 ### Build the project:
 For windows platforms:
