@@ -44,6 +44,10 @@ class CreditCardList extends Component {
   componentWillReceiveProps(nextProps) {
   }
 
+  editCard = (id) => {
+    
+  }
+
   render() {
     const { cards } = this.props
 

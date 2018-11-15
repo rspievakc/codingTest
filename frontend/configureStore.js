@@ -28,12 +28,13 @@ let middlewares = [
   router
 ]
 
-if (process.env.NODE_ENV !== 'production') {
+const NODE_ENV = process.env.NODE_ENV
+if (NODE_ENV !== 'production' && NODE_ENV !== 'test') {
   middlewares = [...middlewares, logger]
 }
 
 let createStoreWithMiddleware
-if (process.env.NODE_ENV !== 'production') {
+if (NODE_ENV !== 'production' && NODE_ENV !== 'test') {
   createStoreWithMiddleware = composeWithDevTools(applyMiddleware(...middlewares))(createStore)
 } else {
   createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore)

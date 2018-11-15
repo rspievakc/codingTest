@@ -9,18 +9,6 @@
 			"stage-2"
 		]
 	},
-	"jest": {
-		"verbose": true,
-		"moduleDirectories": [
-			"node_modules",
-			"src",
-			"test"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(scss|css|less)$": "<rootDir>/__mocks__/styleMock.js"
-    }
-	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/rspievakc/codingTest"
@@ -43,7 +31,7 @@
 		"lodash": "^4.17.10",
 		"moment": "^2.22.2",
 		"prop-types": "^15.6.1",
-		"react": "^16.3.2",
+		"react": "^16.6.1",
 		"react-dom": "^16.3.2",
 		"react-dropzone": "^4.2.10",
 		"react-flatpickr": "^3.6.4",
@@ -57,7 +45,6 @@
 		"react-router-dom": "^4.2.2",
 		"react-router-redux": "^5.0.0-alpha.9",
 		"react-slick": "^0.23.1",
-		"react-test-renderer": "^16.6.1",
 		"react-transition-group": "^1.2.1",
 		"redux": "^3.7.2",
 		"redux-actions": "^2.3.0",
@@ -88,6 +75,9 @@
 		"babel-preset-stage-2": "^6.24.1",
 		"cross-env": "^5.1.4",
 		"css-loader": "^0.28.11",
+		"enzyme": "^3.7.0",
+		"enzyme-adapter-react-15": "^1.2.0",
+		"enzyme-adapter-react-16": "^1.7.0",
 		"eslint": "^4.19.1",
 		"eslint-config-airbnb": "^16.1.0",
 		"eslint-plugin-babel": "^4.1.2",
@@ -97,6 +87,8 @@
 		"eslint-plugin-react-native": "^3.2.1",
 		"file-loader": "^1.1.11",
 		"identity-obj-proxy": "^3.0.0",
+		"jasmine": "^3.3.0",
+		"jasmine-node": "^1.16.2",
 		"jest": "^23.6.0",
 		"jest-cli": "^23.6.0",
 		"jest-enzyme": "^7.0.1",
@@ -105,6 +97,7 @@
 		"postcss-loader": "^2.1.4",
 		"pug": "^2.0.3",
 		"react-hot-loader": "^4.3.1",
+		"react-test-renderer": "^16.6.1",
 		"resolve-url-loader": "^2.3.0",
 		"sass-loader": "^6.0.7",
 		"scss-loader": "0.0.1",
@@ -118,7 +111,9 @@
 	},
 	"scripts": {
 		"start": "webpack-dev-server --mode development --progress --colors --hot --config ./webpack.config.js --host 0.0.0.0",
-		"test": "jest",
+    "test": "jest",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
+    "test:watch": "node --inspect node_modules/.bin/jest --watch --runInBand",
 		"build": "NODE_ENV='production' webpack --mode production --optimize-minimize --progress"
 	},
 	"keywords": [],

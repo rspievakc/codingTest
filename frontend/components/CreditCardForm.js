@@ -52,33 +52,28 @@ const email = value =>
  * It requires a promise as the return.
  * This validation will only happen during the form submition
  */
-const asyncValidate = values => {
-  return new Promise((resolve, reject) => {
-    const errors = {}
-    if (!values.name) {
-      errors.name = 'This field is required.'
-    } 
-    if (!values.number) {
-      errors.number = 'This field is required.'
-    }
-    else if (!validateCreditCard(values.number)) {
-        errors.number = 'Invalid credit card number.'
-    }
-    if (!values.limit) {
-      errors.limit = 'This field is required.'
-    }
-    if (Object.keys(errors).length !== 0 || errors.constructor !== Object) {
-      reject(errors)
-    } else {
-      resolve();
-    }
-  })
+const validate = (values) => {
+  const errors = {}
+  if (!values.name) {
+    errors.name = 'This field is required.'
+  } 
+  if (!values.number) {
+    errors.number = 'This field is required.'
+  }
+  else if (!validateCreditCard(values.number)) {
+    errors.number = 'Invalid credit card number.'
+  }
+  if (!values.limit) {
+    errors.limit = 'This field is required.'
+  }
+  if (Object.keys(errors).length !== 0 || errors.constructor !== Object) {
+    return errors
+  } 
+
+  return null;  
 }
 
-class CreditCardForm extends Component {
-  constructor(props) {
-    super(props)
-  }
+export class CreditCardForm extends Component {
 
   onSubmit = (values) => {
     this.props.addCard(values)
@@ -107,7 +102,7 @@ class CreditCardForm extends Component {
               pattern="[0-9]*"
               type="number"
             />
-            <Field name="limit" 
+            <Field name="limit"
               label="Limit"
               component={SemanticFormField}
               as={Form.Input}
@@ -117,10 +112,10 @@ class CreditCardForm extends Component {
               type="number"
             />
             <div style={{textAlign: 'right'}}>
-              <Button disabled={pristine || submitting} className="submit blue" onClick={handleSubmit(this.onSubmit)}>
+              <Button name="submit" disabled={pristine || submitting} className="submit blue" onClick={handleSubmit(this.onSubmit)}>
                 Add
               </Button>
-              <Button disabled={pristine || submitting} onClick={reset}>
+              <Button name="reset" disabled={pristine || submitting} className="reset" onClick={reset}>
                 Reset
               </Button>
             </div>
@@ -147,7 +142,8 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
   form: 'creditCartForm',
-  asyncValidate,
-  asyncBlurFields: [],
+  validate,
+  touchOnBlur: false,
+  touchOnChange: false,
   enableReinitialize: true,
 })(CreditCardForm))
